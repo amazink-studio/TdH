@@ -1,0 +1,155 @@
+@charset 'UTF-8';
+
+h3 {
+	margin: 6rem auto 0rem;
+	text-align: center;
+}
+
+section {
+	display: grid;
+	grid-template-columns: 1fr;	
+	padding: 0 0 8rem;
+}
+@media (min-width: 820px) {
+	section {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0rem;
+	}
+}
+section .contenedorDirectorios {
+	margin: 0 auto;
+	padding: 0 1rem;
+	max-width: 600px;
+}
+section h4.region {
+	display: block;
+	background-color: rgba(128, 128, 255, 1);
+	padding: 1rem;
+	margin: 4rem 0 2rem;
+
+	font-family: 'Noto Serif', serif;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+}
+#directorio-sec2 h4.region {
+	background-color: rgba(255, 123, 84, 1);
+}
+section article h4 {
+	padding: 2rem 1rem 1rem;
+	margin: 0;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	font-weight: 300;
+
+	text-align: left;
+	color: rgba(128, 128, 255, 1);
+}
+#directorio-sec2 article h4 {
+	color: rgba(255, 123, 84, 1);
+}
+section article h4 em {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	font-weight: 500;
+}
+
+section article p {
+	margin: 0 1rem 1.6rem 3rem;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+}
+
+
+/* ------ TABS ------ */
+/* ------ TABS ------ */
+/* ------ TABS ------ */
+.tabs-Contenedor {
+	position: relative;
+	background-color: rgba(255, 123, 84, 1);
+	margin: 2rem 0 0;
+	width: 30%; 
+	float: left;
+	z-index: 20;
+}
+#directorio-sec2 .tabs-Contenedor {
+	background-color: rgba(128, 128, 255, 1);
+}
+.tabs-Contenedor label{
+	position: relative;
+	padding: 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+	display: block;
+	font-size: 1rem;
+	text-align: center; 
+	color: rgba(255, 255, 255, 1);
+	cursor: pointer;	
+}
+ 
+/* Efecto de rollover */
+.tabs-Contenedor label:hover{ 
+	background: rgba(128, 128, 255, 1);
+}
+.tabs-Contenedor label:active {
+	background: rgba(128, 128, 255, 1);
+}
+
+#directorio-sec2 .tabs-Contenedor label:hover{
+	background: rgba(255, 123, 84, 1);
+}
+#directorio-sec2 .tabs-Contenedor label:active {
+	background: rgba(255, 123, 84, 1);
+}
+
+/* Area para el contenido de las pestañas */
+.tab-contenido{ 
+	position: relative;
+	background: rgba(255, 255, 255, 1);
+	width: 70%;
+	float: left;
+	box-sizing: border-box;
+	border: solid 3px rgba(255, 123, 84, 1); 
+	z-index: 19;
+	display: none;
+	padding: 0 0 3rem;
+}
+#directorio-sec2 .tab-contenido{
+	border: solid 3px rgba(128, 128, 255, 1);
+}
+.tab-contenido:after{
+	content: "";
+	clear: both;
+}
+
+/* Esconde los botones de radio */
+input[name="tab"],
+input[name="tab2"],
+input[name="tab3"],
+input[name="tab4"]{
+	display: none;
+}
+
+/* Muestra el contenido cuando son orpimidos los botones de radio */
+input[name="tab"]:checked + .tab-contenido,
+input[name="tab2"]:checked + .tab-contenido,
+input[name="tab3"]:checked + .tab-contenido,
+input[name="tab4"]:checked + .tab-contenido {
+	display: block;
+	animation: slide 0.2s ease-in-out;
+}
+ 
+/* Animación de entrada de los slides */
+@keyframes slide{
+	from{
+		left: -50%;
+		transform: scaleX(0.1);
+		opacity: 0;
+	}
+	to{
+		left: 0;
+		transform: scaleX(1.0);
+		opacity: 1;
+	}
+}

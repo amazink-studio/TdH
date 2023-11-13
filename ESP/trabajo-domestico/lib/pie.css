@@ -1,0 +1,104 @@
+@charset 'UTF-8';
+
+footer {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;	
+}
+article.logos {
+	display: flex;
+	gap:1rem;
+	padding: 0 0 0 2rem;
+}
+article.logos img {
+	width:50%;
+}
+footer #enlacesInformes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
+	justify-content: center;
+	padding: 6rem 0;
+
+	background-color: rgba(128, 128, 255, 1);
+	background-image: url(../images/pie-fondo.svg);
+	background-size: cover;
+}
+footer #enlacesInformes article {
+	flex: 1 1 300px;
+
+	max-width: 400px;
+	transition: all .2s ease-in-out;
+}
+
+footer #enlacesInformes article:hover {
+	transform: scale(1.2);
+	transition: all .2s ease-in-out;
+}
+footer #enlacesInformes article .botonDescarga {
+	display: flex;
+	gap: 1rem;
+	align-items:center;
+	justify-content: center;
+
+	background-color: rgba(255, 123, 84, 1);
+
+	width: 300px;
+	padding: 1rem;
+	margin: 0 auto;
+}
+footer #enlacesInformes article .botonDescarga p {
+	margin: unset;
+	font-family: 'Noto Serif', serif;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+}
+footer #enlacesInformes article a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 1.0);
+}
+footer #enlacesInformes article a img {
+	width: 50%;
+	max-width: 150px;
+	margin: 0 auto 1rem;
+}
+footer #enlacesInformes article a .material-symbols-outlined {
+	font-size: 4rem;
+}
+
+footer #creditos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	align-items: flex-start;
+	justify-content: center;
+	text-align:center;
+
+	padding: 6rem 2rem;
+
+	background-color: rgba(0, 108, 115, 1);
+	color: rgba(255, 255, 255, 0.7);
+}
+footer #creditos p {
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+footer #creditos a {
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+}
+footer #creditos a:hover {
+	color: rgba(255, 75, 107, 1);
+}
+footer #creditos img {
+	flex: 1 1 100px;
+	max-width: 200px;
+	align-self: center;
+}
+footer #creditos article {
+	flex: 2 1 auto;
+}
+footer #creditos i {
+	font-size: 3rem;
+	margin: 0 2rem 0 0;
+}

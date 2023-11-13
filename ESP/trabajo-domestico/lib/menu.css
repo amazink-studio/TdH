@@ -1,0 +1,235 @@
+@charset 'UTF-8';
+
+nav {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 30;
+}
+nav .logo {
+	position: absolute;
+	width: 90px;
+	margin: 0 1rem;
+	display: block;
+	float: left;
+	z-index: 40;
+}
+
+nav .idioma {
+	position: absolute;
+	top: 18px;
+	left: calc(90px + 1rem);
+	display: inline-block;
+	font-size: .8rem;
+/*	font-weight: 300;*/
+	text-decoration: none;
+	padding: 1rem;
+	color: rgba(249, 225, 50, 1);
+	
+	cursor: pointer;	
+}
+nav .idioma:hover {
+	color: rgba(255, 255, 255, 1);
+
+}
+
+nav ul {
+	position: absolute;
+	list-style: none;
+	overflow: hidden;
+	top: 90px;
+	width: 100%;
+	height: calc(100vh - 90px);
+	background-color: rgba(0, 108, 115, .8);
+	-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	font-family: 'Noto Serif', serif;
+	text-align: center;
+	font-weight: 400;
+	border-top: solid 10px rgba(132, 128, 247, 1.0);
+}
+nav li.ir {
+	margin: 2rem 0 1rem;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	text-decoration: none;
+	color: rgba(255, 255, 255, .5);
+}
+nav li a {
+	display: block;
+	margin: 0.5rem 1rem;
+	padding: 1rem 0;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 1);
+	transition: background-color .5s ease-out;
+}
+nav li a:hover, 
+nav li a:active,
+nav li a:after {
+	background-color: rgba(128, 128, 255, 1);
+	transition: background-color .5s ease-out;
+}
+nav li a.actual {
+	cursor: unset;
+	color: rgba(255, 255, 255, 0.5);
+	background-color: unset;
+}
+/* menu */
+nav .menu {
+	clear: both;
+	left: -100%;
+	transition: left .2s ease-in-out;
+}
+/* menu icono */
+nav .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	width: 100%;
+	height: 70px;
+	user-select: none;
+	background-color: rgba(0, 108, 115, 1);
+	border-bottom: solid 4px rgba(128, 128, 255, 1);
+}
+nav .menu-icon .navicon {
+	background-color: rgba(255, 255, 255, 1);
+	display: block;
+	height: 6px;
+	position: relative;
+	margin: 32px 25px 0 auto;
+	transition: background .2s ease-out;
+	width: 28px;
+	border-radius: 3px;
+}
+nav .menu-icon .navicon:before,
+nav .menu-icon .navicon:after {
+	background-color: rgba(255, 255, 255, 1);
+	content: '';
+	border-radius: 3px;
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+nav .menu-icon .navicon:before {
+	top: 10px;
+}
+nav .menu-icon .navicon:after {
+	top: -10px;
+}
+/* menu btn */
+nav .menu-btn {
+	display: none;
+}
+nav .menu-btn:checked ~ .menu {
+	left: 0;
+}
+nav .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+}
+nav .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+}
+nav .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+}
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+}
+/* Menu responsive */
+@media (min-width: 820px) {
+	nav {
+		position: sticky;
+		margin: 0 auto;
+		max-width: 1400px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: rgba(0, 108, 115, 1);
+		border-bottom: solid 10px rgba(128, 128, 255, 1);
+
+	}
+	nav .logo {
+		width: 150px;
+		margin: 0 1rem 0 2%;
+	}
+	nav .idioma {
+		font-size: 0.8rem;
+		left: calc(150px + 2%);
+		top: 0;
+		padding: 0.5rem;
+	}
+	nav ul {
+		position: relative;
+		top: 0;
+		list-style: none;
+		overflow: hidden;
+		padding: 0;
+		width: calc(96% - 185px);
+		height: 65px;
+		margin: 0 0 0 auto;
+		background-color: rgba(0, 108, 115, .95);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+
+		display: flex;
+		justify-content: flex-end;
+
+	}
+
+	nav li a {
+		margin: unset;
+		padding: 1rem 0.8rem;
+		display: inline-block;
+		height: calc(65px - 2rem);
+		font-weight: 500;
+		font-size: 0.9rem;
+		line-height: 1.4rem;
+		text-align: center;
+		background-color: unset;
+	}
+	nav li a.actual {
+		height: calc(55px - 2rem);
+		border-bottom: solid 10px rgba(128, 128, 255, 0.5);
+		color: rgba(255, 255, 255, 0.5);
+	}
+	nav .menu,
+	nav .menu-btn:checked ~ .menu  {
+		clear: none;
+		max-height: none;
+		padding: unset;
+		left: unset;
+		border-top: unset;
+	}
+	nav li.ir, nav .menu-icon {
+		display: none;
+	}
+}
+
+@media (min-width: 900px) {
+	nav li {
+		width: 100%;
+	}
+	nav li a {
+		margin: unset;
+		padding: 1rem 0;
+		display: block;
+	}
+}
+
+@media (min-width: 1100px) {
+	nav li a {
+		font-size: 1rem;
+		line-height: 1.4rem;
+	}
+}
+@media (min-width: 1200px) {
+	nav ul {
+		width: calc(90% - 185px);
+	}
+}
+

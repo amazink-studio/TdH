@@ -1,0 +1,322 @@
+@charset 'UTF-8';
+
+/* Convenios - Sección 1 */
+#convenios-sec1 {
+	padding: 6rem 0 0;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+#convenios-sec1 h3 {
+	margin: 0 2rem 3rem;
+}
+#convenios-sec1 article.preguntaContexto {
+	margin: 0 1rem 6rem;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+#convenios-sec1 article.preguntaContexto h4 {
+	padding: 2rem 1rem;
+	width: 50%;
+	color: rgba(255, 255, 255, 1);
+}
+#convenios-sec1 article.preguntaContexto h4 span {
+	font-size: 4rem;
+	transform: translateY(-1rem);
+}
+#convenios-sec1 article.preguntaContexto p {
+	margin: 0 1rem 0 7rem;
+}
+#convenios-sec1 article.preguntaContexto h4:after {
+	content: '';
+	display: block;
+	margin: 2rem 0 1rem;
+	background-color: rgba(255, 255, 255, 1);
+	position: relative;
+	width: 20%;
+	height: 4px;
+	top: 0;
+	left: 0;
+}
+#convenios-sec1 .ahora {
+	background-color: rgba(0, 145, 152, 1);
+	padding: 2rem 2rem 2rem;
+	margin: 0 0 -1px;
+	font-family: 'Noto Serif', serif;
+	font-weight: 700;
+	font-size: 1.6rem;
+	
+	color: rgba(255, 255, 255, 1);
+}
+#convenios-sec1 article.preguntaConvenio {
+	background-color: rgba(128, 128, 255, 1);
+	padding: 2rem 0;
+	color: rgba(255, 255, 255, 1);
+}
+#convenios-sec1 article.preguntaConvenio h4{
+	margin: 0 2rem 2rem;
+	max-width: 230px;
+}
+#convenios-sec1 article.preguntaConvenio p {
+	margin: 0 1rem 0 8rem;
+}
+#convenios-sec1 img {
+	margin: 0 auto;
+	width: 50%;
+	align-self: end;
+}
+@media (min-width: 550px) {
+	#convenios-sec1 h3 {
+		text-align: center;
+		margin: 2rem auto 4rem;
+		width: 80%;
+		max-width: 600px;
+	}
+	#convenios-sec1 article.preguntaContexto {
+		margin: 0 2rem 4rem;
+		grid-template-columns: auto 2fr;
+	}
+	#convenios-sec1 article.preguntaContexto h4 {
+		padding: 2rem 1rem;
+		width: calc(100% - 2rem);
+		max-width: 200px;
+		margin: unset;
+	}
+	#convenios-sec1 article.preguntaContexto h4 span {
+		transform: rotate(-90deg) translateY(-5px);
+
+	}
+	#convenios-sec1 article.preguntaContexto p {
+		margin: 0 2rem;
+		align-self: center;
+		max-width: 520px;
+	}
+	#convenios-sec1 .ahora {
+		font-size: 3rem;
+	}
+	#convenios-sec1 img {
+		transform: translateY(77px);
+	}
+	#convenios-sec1 article.preguntaConvenio h4{
+		margin: 0 2rem 2rem 28%;
+		max-width: 230px;
+	}
+	#convenios-sec1 article.preguntaConvenio p {
+		margin: 0 1rem 2rem  calc(28% + 8rem);
+		max-width: 520px;
+	}
+}
+@media (min-width: 820px) {
+	#convenios-sec1 {
+		grid-template-columns: 1fr 1fr;
+	}
+	#convenios-sec1 h3 {
+		grid-column: 1 / -1;
+	}
+	#convenios-sec1 article.preguntaContexto {
+		margin: 0 0 4rem 0;
+		grid-template-columns: 2fr 3fr;
+	}
+	#convenios-sec1 article.preguntaContexto h4 {
+		padding: 2rem 1rem 2rem 2rem;
+		width: calc(100% - 3rem);
+		max-width: 210px;
+	}
+	#convenios-sec1 article.preguntaContexto p {
+		margin: 2rem 4rem 2rem 2rem;
+		justify-self: start;
+	}
+	#convenios-sec1 .ahora {
+		grid-column: 1 / -1 ;
+		
+		text-align: center;
+	}
+	#convenios-sec1 article.preguntaConvenio {
+		background-color: rgba(128, 128, 255, 1);
+		padding: 2rem 0 6rem;
+		color: rgba(255, 255, 255, 1);
+	}
+	#convenios-sec1 article.preguntaConvenio h4{
+		margin: 0 4rem 2rem;
+		max-width: 230px;
+	}
+	#convenios-sec1 article.preguntaConvenio p {
+		margin: 0 1rem 0 10rem;
+	}
+	#convenios-sec1 img {
+		grid-column: 2;
+		grid-row: 3 / span 2;
+		width: 80%;
+		max-width: 570px;
+		margin: 5rem auto 0;
+	}
+}
+@media (min-width: 1100px) {
+	#convenios-sec1 img {
+		transform: translateY(82px);
+	}
+	#convenios-sec1 article.preguntaConvenio h4{
+		margin: 0 4rem 2rem;
+		max-width: 350px;
+	}
+}
+
+/* Convenios - Sección 2 */
+#convenios-sec2 {
+	padding: 6rem 0;
+}
+#convenios-sec2 h2 {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	text-align: center;
+	margin: 0 auto 2rem;
+	max-width: 400px;
+}
+#convenios-sec2 object {
+	width: calc(100% - 2rem);
+	max-height: 80vh;
+	margin: 1rem;
+}
+@media (min-width: 820px) {
+	#convenios-sec2 h2 {
+		font-size: 3rem;
+		line-height: 3.4rem;
+		max-width: 600px;
+	}
+	#convenios-sec2 object {
+		width: calc(100% - 4rem);
+		margin: 2rem;
+		max-height: 95vh;
+	}
+}
+
+/* Convenios - Sección 3 */
+#convenios-sec3 {
+	padding: 6rem 0;
+	background-color: rgba(128, 128, 242, 1);
+	background-image: url(../images/convenios-fondo3.svg);
+	background-size: cover;
+	color: rgba(255, 255, 255, 1);
+}
+#convenios-sec3 h3 {
+	text-align: center;
+	margin: 2rem auto;
+	max-width: 500px;
+}
+#convenios-sec3 #estandares {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+	margin: 0 2rem;
+}
+#convenios-sec3 #estandares article {
+	flex: 1 1 300px;
+	
+	max-width: 400px;
+}
+#convenios-sec3 #estandares article img {
+	margin: 1rem auto 0;
+	width: 60%;
+}
+#convenios-sec3 #estandares article h4 {
+	text-align: center;
+	margin: 1rem auto;
+	font-weight: 700;
+}
+#convenios-sec3 #estandares article p {
+	text-align: center;
+	margin: 0 auto;
+}
+@media (min-width: 1100px) {
+	#convenios-sec3 h3 {
+		max-width: 640px;
+	}
+}
+
+/* Convenios - Sección 4 */
+#convenios-sec4 {
+	padding: 6rem 0 0;
+}
+#convenios-sec4 h2{
+	margin: 0 2rem 4rem;
+	max-width: 600px;
+}
+#convenios-sec4 article {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	column-gap: 2rem;
+	justify-content: center;
+}
+#convenios-sec4 article img {
+	flex: 1 1 200px;
+	align-self: flex-start;
+	min-width: 150px;
+	max-width: 380px;
+	margin: 0 0 0 auto;
+}
+#convenios-sec4 article div {
+	flex: 1 1 200px;
+	margin: 0 2rem;
+	max-width: 700px;
+	align-self: center;
+}
+#convenios-sec4 article div p {
+	max-width: 480px;
+}
+@media (min-width: 1100px) {
+	#convenios-sec4 h2{
+		margin: 0 6rem 4rem;
+		max-width: 730px;
+	}
+}
+
+
+/* Convenios - Sección 5 */
+#convenios-sec5 {
+	padding: 6rem 0 0;
+	background-color: rgba(46, 164, 128, 1);
+	background-image: url(../images/convenios-fondo4.svg);
+	background-size: cover;
+	color: rgba(255, 255, 255, 1);
+	border-bottom: solid 1rem rgba(255, 255, 255, 1);
+}
+#convenios-sec5 h3 {
+	text-align: center;
+	margin: 0 auto 5rem;
+	padding: 1rem;
+}
+#convenios-sec5 article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#convenios-sec5 article ul {
+	flex: 1 1 400px;
+	max-width: 700px;
+	align-self: center;
+	margin: 0 0 5rem;
+}
+#convenios-sec5 article li {
+	max-width: 500px;
+	margin: 0 0 0 auto;
+	padding: 0 4rem;
+}
+#convenios-sec5 article li:before {
+	position: relative;
+	left: -1rem;
+	top: 1.2rem;
+	border-radius: 50%;
+	content: '';
+	display: block;
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+#convenios-sec5 article img {
+	flex: 1 1 300px;
+	align-self: flex-end;
+	min-width: 200px;
+	max-width: 457px;
+	
+}
